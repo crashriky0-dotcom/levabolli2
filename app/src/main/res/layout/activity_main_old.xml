@@ -160,7 +160,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <!-- Tetto -->
             <Button
@@ -176,7 +176,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <!-- Baule -->
             <Button
@@ -192,7 +192,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <!-- LATO SINISTRO -->
             <Button
@@ -212,7 +212,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@id/btnCofano" /
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnPortaAntSx"
@@ -231,7 +231,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@id/btnTetto" /
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnPortaPostSx"
@@ -250,7 +250,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnParafangoPostSx"
@@ -269,7 +269,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@id/btnBaule" /
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <!-- LATO DESTRO -->
             <Button
@@ -289,7 +289,7 @@
                 app:layout_constraintStart_toEndOf="@id/btnCofano"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnPortaAntDx"
@@ -308,7 +308,7 @@
                 app:layout_constraintStart_toEndOf="@id/btnTetto"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnPortaPostDx"
@@ -327,7 +327,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
             <Button
                 android:id="@+id/btnParafangoPostDx"
@@ -346,7 +346,7 @@
                 app:layout_constraintStart_toEndOf="@id/btnBaule"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"/
-                style="@style/PanelButton">
+                style="@style/PanelButton"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
