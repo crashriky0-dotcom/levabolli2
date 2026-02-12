@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- DATI CLIENTE -->
+        <TextView
+            android:id="@+id/txtClienteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client_title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/edtTecnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/technician" />
+
+        <EditText
+            android:id="@+id/edtData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date" />
+
+        <EditText
+            android:id="@+id/edtMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/brand" />
+
+        <EditText
+            android:id="@+id/edtModello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/model" />
+
+        <EditText
+            android:id="@+id/edtTarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/plate"
+            android:layout_marginBottom="12dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="12dp" />
+
+        <!-- TASTI FUNZIONI -->
+        <Button
+            android:id="@+id/btnMisuraFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_measure_from_photo"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnSalvaPreventivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_save_quote" />
+
+            <Button
+                android:id="@+id/btnPreventiviSalvati"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/btn_saved_quotes" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnListino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_pricing_table"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_title"
+            android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/darker_gray"
+            android:text="@string/settings"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+
+
+        <!-- TITOLO CARROZZERIA -->
+        <TextView
+            android:id="@+id/txtCarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_panels"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- SCHEMA AUTO -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/carLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="420dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.22" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.78" />
+
+            <!-- Cofano -->
+            <Button
+                android:id="@+id/btnCofano"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="12dp"
+                android:text="@string/panel_hood"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="8dp"/
+                style="@style/PanelButton">
+
+            <!-- Tetto -->
+            <Button
+                android:id="@+id/btnTetto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="12dp"
+                android:text="@string/panel_roof"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/btnCofano"
+                app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="16dp"/
+                style="@style/PanelButton">
+
+            <!-- Baule -->
+            <Button
+                android:id="@+id/btnBaule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="12dp"
+                android:text="@string/panel_trunk"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/btnTetto"
+                app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="16dp"/
+                style="@style/PanelButton">
+
+            <!-- LATO SINISTRO -->
+            <Button
+                android:id="@+id/btnParafangoAntSx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_fender_fl"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnCofano"
+                app:layout_constraintBottom_toBottomOf="@id/btnCofano"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/btnCofano" /
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnPortaAntSx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_door_fl"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnTetto"
+                app:layout_constraintBottom_toBottomOf="@id/btnTetto"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/btnTetto" /
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnPortaPostSx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_door_rl"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/btnPortaAntSx"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnTetto"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"/
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnParafangoPostSx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_fender_rl"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnBaule"
+                app:layout_constraintBottom_toBottomOf="@id/btnBaule"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/btnBaule" /
+                style="@style/PanelButton">
+
+            <!-- LATO DESTRO -->
+            <Button
+                android:id="@+id/btnParafangoAntDx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_fender_fr"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnCofano"
+                app:layout_constraintBottom_toBottomOf="@id/btnCofano"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnCofano"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"/
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnPortaAntDx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_door_fr"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnTetto"
+                app:layout_constraintBottom_toBottomOf="@id/btnTetto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTetto"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"/
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnPortaPostDx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_door_rr"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/btnPortaAntDx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTetto"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"/
+                style="@style/PanelButton">
+
+            <Button
+                android:id="@+id/btnParafangoPostDx"
+                android:layout_width="0dp"
+                android:minWidth="72dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp"
+                android:text="@string/panel_fender_rr"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="@id/btnBaule"
+                app:layout_constraintBottom_toBottomOf="@id/btnBaule"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnBaule"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"/
+                style="@style/PanelButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- TOTALI -->
+        <TextView
+            android:id="@+id/txtTotConsigliato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_suggested_placeholder"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/txtTotApplicato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_applied_placeholder"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/txtTotSconto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_discount_placeholder"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnEsportaPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pdf_export"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
