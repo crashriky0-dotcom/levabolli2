@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- DATI CLIENTE -->
+        <TextView
+            android:id="@+id/txtClienteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client_title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/technician"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/brand"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etModello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/model"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etTarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/plate"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- PULSANTI FUNZIONI -->
+        <Button
+            android:id="@+id/btnMisuraFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_measure_from_photo"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnSalvaPreventivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_save_quote"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnPreventiviSalvati"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_saved_quotes"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnListino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_pricing_table"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/info_title"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings"
+                android:layout_marginStart="4dp"
+                android:drawableLeft="@android:drawable/ic_menu_preferences"
+                android:drawablePadding="4dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TITOLO PANNELLI -->
+        <TextView
+            android:id="@+id/txtPanelTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_panels"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- LISTA PANNELLI VERTICALE -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPanels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TOTALI -->
+        <TextView
+            android:id="@+id/txtTotConsigliato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_suggested_placeholder"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/txtTotApplicato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_applied_placeholder"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/txtTotSconto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_discount_placeholder"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#FF5722"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ESPORTA PDF -->
+        <Button
+            android:id="@+id/btnEsportaPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pdf_export"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnApriCartellaPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_pdf_folder"
+            android:backgroundTint="#9E9E9E"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
